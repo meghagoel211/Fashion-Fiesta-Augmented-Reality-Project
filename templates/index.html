@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fashion Fiesta</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+<link href="static/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<script src="static/js/jquery.min.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+
+<style>
+.button {
+    background-color: #ff9b05;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+</style>
+</head>
+	
+<body>
+<!-- header -->
+	
+<nav class="navbar navbar-expand-md navbar-light fixed-top py-4" id="main-nav">
+    <div class="container">
+      <a href="#home" class="navbar-brand">
+        <img src="./../static/images/Fashion Fiesta-logo.png" width="300" height="60" alt="">
+        <!--<h3 class="d-inline align-middle">Fashion Fiesta</h3>-->
+      </a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="#home" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#tryon" class="nav-link">Prototype</a>
+		  </li>
+		  <li class="nav-item">
+            <a href="/compare" class="nav-link">Compare</a>
+		  </li>
+			<li class="nav-item">
+				<a href="/checkout" class="nav-link" onclick="checkOut()" id="simpleCart_quantity"></a>
+			</li>
+        </ul>
+      </div>
+    </div>
+</nav>
+	
+  <section id="home" class="py-5 my-dem">
+    <div class="primary-overlay text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 text-center">
+            <h1 class="display-2 mt-5 pb-2">
+              Want help designing your perfect life?
+            </h1>
+            <p class="lead pb-4">We help you wear an unusual accessory to complete your outfit.</p>
+            <a href="#tryon" class="btn btn-outline-secondary btn-lg text-white">
+              <i class="fas fa-arrow-right"></i> Try Now
+            </a>
+          </div>
+          <div class="col-lg-6 text-center pt-5 mt-5 pl-5">
+            <img src="./static/images/fashion.jpg" alt="" class="img-fluid d-none d-lg-block">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- BOXES -->
+	<section id="about" class="py-5">
+		<div class="container">
+		  <div class="row card-group">
+			<div class="col-md-3 m=2">
+			  <div class="card text-center border-primary mb-resp">
+				<div class="card-body">
+				  <h3 class="text-primary">Be Better</h3>
+				  <p class="text-muted">As a woman gets older, it's more about style than fashion. A woman knowing herself more and more, and looking for new things, is getting into her own personal style, being more than just a fashion addict</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-3">
+			  <div class="card text-center bg-primary text-white mb-resp">
+				<div class="card-body">
+				  <h3>Be Smarter</h3>
+				  <p>Fashion you can buy, but style you possess. The key to style is learning who you are, which takes years. There's no how-to road map to style. It's about self expression and, above all, attitude</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-3">
+			  <div class="card text-center border-primary mb-resp">
+				<div class="card-body">
+				  <h3 class="text-primary">Be Faster</h3>
+				  <p class="text-muted">What you wear is how you present yourself to the world, especially today, when human contacts are so quick. Fashion is instant language.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-3">
+			  <div class="card text-center bg-primary text-white">
+				<div class="card-body">
+				  <h3>Be Stronger</h3>
+				  <p>Fashion is the armour to survive the reality of everyday life.</p>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </section>
+	
+	  <!-- ABOUT / WHY SECTION -->
+	  <section id="about2" class="py-5 text-center bg-light">
+		<div class="container">
+		  <div class="row">
+			<div class="col">
+			  <div class="info-header mb-5">
+				<h1 class="text-primary pb-3">
+				  "Clothes can suggest, persuade, connote, insinuate, or indeed lie, and apply subtle pressure while their wearer is speaking frankly and straightforwardly of other matters.”
+				</h1>
+				<p class="lead pb-3">
+				  -Anne Hollander
+				</p>
+			  </div>
+	
+			  <!-- ACCORDION -->
+			  <div id="accordion">
+				<div class="card">
+				  <div class="card-header">
+					<h5 class="mb-0">
+					  <div href="#collapse1" data-toggle="collapse" data-parent="#accordion">
+						<i class="fas fa-arrow-circle-down"></i> Get Inspired
+					  </div>
+					</h5>
+				  </div>
+	
+				  <div id="collapse1" class="collapse show">
+					<div class="card-body">
+					  Fashion not only makes women more beautiful, but also reassures them, giving confidence.
+					</div>
+				  </div>
+				</div>
+	
+				<div class="card">
+				  <div class="card-header">
+					<h5 class="mb-0">
+					  <div href="#collapse2" data-toggle="collapse" data-parent="#accordion">
+						<i class="fas fa-arrow-circle-down"></i> Real Time 3-D tryon
+					  </div>
+					</h5>
+				  </div>
+	
+				  <div id="collapse2" class="collapse">
+					<div class="card-body">
+					  Trying clothes in clothing stores is usually a time consuming activity. Besides, it might not even be possible to try-on clothes in such cases as online shopping. Our motivation here is to increase the time efficiency and improve the accessibility of clothes try on by creating a virtual dressing room environment.
+					</div>
+				  </div>
+				</div>
+	
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </section>
+	
+<!-- banner-bottom -->
+	<div class="banner-bottom" id="tryon">
+		<div class="container">
+			<div class="col-md-12 wthree_banner_bottom_right">
+				<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+					<ul id="myTab" class="nav nav-tabs" role="tablist">
+						<li role="presentation" class="nav-item"><a class="nav-link active" href="#watches" role="tab" id="watches-tab" data-toggle="tab" aria-controls="watches">Tiaras</a></li>
+						<li role="presentation" class="nav-item"><a class="nav-link" href="#ho" id="ho-tab" role="tab" data-toggle="tab" aria-controls="ho">Necklaces</a></li>
+						<li role="presentation" class="nav-item"><a class="nav-link" href="#skirts" role="tab" id="skirts-tab" data-toggle="tab" aria-controls="skirts">Earrings</a></li>
+						<li role="presentation" class="nav-item"><a class="nav-link" href="#dresses" role="tab" id="dresses-tab" data-toggle="tab" aria-controls="dresses">Frocks</a></li>
+						<li role="presentation" class="nav-item"><a class="nav-link" href="#sandals" id="sandals-tab" role="tab" data-toggle="tab" aria-controls="sandals">Tops</a></li>
+						
+					</ul>
+					
+					
+					<div id="myTabContent" class="tab-content">
+						<!--Head gears-->
+						<div role="tabpanel" class="tab-pane fade show active" id="watches" aria-labelledby="watches-tab">
+							<div class="card-group agile_ecommerce_tabs">
+								<div class="card col-md-4 agile_ecommerce_tab_left">
+									<div class="hs-wrapper">
+										<img src="static/images/Tiaras3/2.png" alt=" " class="card-img-top" />
+										<div class="w3_hs_bottom">
+											<ul>
+												<li>
+													<a href="#" data-toggle="modal" data-target="#<!--myModal2-->"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<h5>Single Maang Tika</h5>
+									<div class="simpleCart_shelfItem">
+										<p><span>Rs.320</span> <i class="item_price">Rs.200</i></p>
+										<p><a class="item_add" style="color: #fff;" type=button onclick="addToCart('static/images/Tiaras3/2.png', 200, 'Single Maang Tika')">Add to cart</a></p>
+									    <p><a class="item_add" href="{{ url_for('tryon',method='POST',
+                                        file_path='static,images,Tiaras3,2.png') }}">Try it Now!</a></p>
+									</div>
+								</div>
+								
+								<div class="card col-md-4 agile_ecommerce_tab_left">
+									<div class="hs-wrapper">
+										<img src="static/images/Tiaras3/3.png" alt=" " class="card-img-top" />
+										<div class="w3_hs_bottom">
+											<ul>
+												<li>
+													<a href="#" data-toggle="modal" data-target="#<!--myModal2-->"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<h5>Tiara</h5>
+									<div class="simpleCart_shelfItem">
+									    <p><span>Rs.220</span> <i class="item_price">Rs.180</i></p>
+										<p><a class="item_add" style="color: #fff;" type=button onclick="addToCart('static/images/Tiaras3/3.png', 180, 'Tiara')">Add to cart</a></p>
+									    <p><a class="item_add" href="{{ url_for('tryon',method='POST',
+                                        file_path='static,images,Tiaras3,3.png') }}">Try it Now!</a></p>
+									</div>
+								</div>
+
+								<div class="card col-md-4 agile_ecommerce_tab_left">
+									<div class="hs-wrapper">
+										<img src="static/images/Tiaras3/5.png" alt=" " class="card-img-top" />
+										<div class="w3_hs_bottom">
+											<ul>
+												<li>
+													<a href="#" data-toggle="modal" data-target="#<!--myModal2-->"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<h5>Tiara</h5>
+									<div class="simpleCart_shelfItem">
+										<p><span>Rs.400</span> <i class="item_price">Rs.300</i></p>
+										<p><a class="item_add" style="color: #fff;" type=button onclick="addToCart('static/images/Tiaras3/5.png', 300, 'Tiara')">Add to cart</a></p>
+									    <p><a class="item_add" href="{{ url_for('tryon',method='POST',
+                                        file_path='static,images,Tiaras3,5.png') }}">Try it Now!</a></p>
+									</div>
+								</div>
+								
+								<div class="clearfix"> </div>
+							</div>
+							<div class="card-group agile_ecommerce_tabs">
+								<div class="card col-md-4 agile_ecommerce_tab_left">
+									<div class="hs-wrapper">
+										<img src="static/images/Tiaras3/6.png" alt=" " class="card-img-top" />
+										<div class="w3_hs_bottom">
+											<ul>
+												<li>
+													<a href="#" data-toggle="modal" data-target="#<!--myModal2-->"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<h5>Tiara</h5>
+									<div class="simpleCart_shelfItem">
+										<p><span>Rs.300</span> <i class="item_price">Rs.280</i></p>
+										<p><a class="item_add" style="color: #fff;" type=button onclick="addToCart('static/images/Tiaras3/6.png', 280, 'Tiara')">Add to cart</a></p>
+									    
+									    <p><a class="item_add" href="{{ url_for('tryon',method='POST',
+                                        file_path='static,images,Tiaras3,6.png') }}">Try it Now!</a></p>
+									</div>
+								</div>
+
+								<div class="card col-md-4 agile_ecommerce_tab_left">
+									<div class="hs-wrapper">
+										<img src="static/images/Tiaras3/8.png" alt=" " class="card-img-top" />
+										<div class="w3_hs_bottom">
+											<ul>
+												<li>
+													<a href="#" data-toggle="modal" data-target="#<!--myModal2-->"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<h5>Tiara</h5>
+									<div class="simpleCart_shelfItem">
+										<p><span>Rs.520</span> <i class="item_price">Rs.400</i></p>
+										<p><a class="item_add" style="color: #fff;" type=button onclick="addToCart('static/images/Tiaras3/8.png', 400, 'Tiara')">Add to cart</a></p>
+									    
+									    <p><a class="item_add" href="{{ url_for('tryon',method='POST',
+                                        file_path='static,images,Tiaras3,8.png') }}">Try it Now!</a></p>
+									</div>
+								</div>
+
+								<div class="card col-md-4 agile_ecommerce_tab_left">
+									<div class="hs-wrapper">
+										<img src="static/images/Tiaras3/9.png" alt=" " class="card-img-top" />
+										<div class="w3_hs_bottom">
+											<ul>
+												<li>
+													<a href="#" data-toggle="modal" data-target="#<!--myModal2-->"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<h5>Floral</h5>
+									<div class="simpleCart_shelfItem">
+										<p><span>Rs.100</span> <i class="item_price">Rs.90</i></p>
+										<p><a class="item_add" style="color: #fff;" type=button onclick="addToCart('static/images/Tiaras3/9.png', 90, Floral)">Add to cart</a></p>
+									    
+									    <p><a class="item_add" href="{{ url_for('tryon',method='POST',
+                                        file_path='static,images,Tiaras3,9.png') }}">Try it Now!</a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!--Necklaces -->
+						<div role="tabpanel" class="tab-pane fade" id="ho" aria-labelledby="ho-tab">
+							<div class="row card-group agile_ecommerce_tabs">
+								<div class="col-md-4 card agile_ecommerce_tab_left">
+										<img src="static/images/Necklace1/1.png" alt=" " class="card-img-top" />
+										
+									<h5>Pendant</h5>
+									<div class="simpleCart_shelfItem">
+										<p><span>Rs.320</span> <i class="item_price">Rs.200</i></p>
+										<p><a class="item_add" style="color: #fff;" type=button onclick="addToCart('static/images/Necklace1/1.png', 200, 'Pendant')">Add to cart</a></p>
+									    
+                                        <p><a class="item_add" href="{{ url_for('tryon',method='POST', file_path='static,images,Necklace1,1.png') }}">Try it Now!</a></p>
+										
+									</div>
+								</div>
+								
+								<div class="card col-md-4 agile_ecommerce_tab_left">
+										<img src="static/images/Necklace1/2.png" alt=" " class="card-img-top" />
+										
+									<h5>Silver Necklace</h5>
+									<div class="simpleCart_shelfItem">
+										<p><span>Rs.620</span> <i class="item_price">Rs.600</i></p>
+										<p><a class="item_add" style="color: #fff;" type=button onclick="addToCart('static/images/Necklace1/2.png', 600, 'Silver Necklace')">Add to cart</a></p>
+									    
+										<p><a class="item_add" href="{{ url_for('tryon',method='POST',
+                                        file_path='static,images,Necklace1,2.png') }}">Try it Now!</a></p>
+									</div>
+								</div>
+
+								<div class="card col-md-4 agile_ecommerce_tab_left">
+										<img src="static/images/Necklace1/3.png" alt=" " class="card-img-top" />
+										
+									<h5>Silver Necklace</h5>
+									<div class="simpleCart_shelfItem">
+										<p><span>Rs.320</span> <i class="item_price">Rs.200</i></p>
+										<p><a class="item_add" style="color: #fff;" type=button onclick="addToCart('static/images/Necklace1/3.png', 200, 'Silver Necklace')">Add to cart</a></p>
+									    
+										<p><a class="item_add" href="{{ url_for('tryon',method='POST',
+                                        file_path='static,images,Necklace1,3.png') }}">Try it Now!</a></p>
+									</div>
+								</div>
+								
+								<div class="clearfix"> </div>
+							</div>
+							<div class="row card-group agile_ecommerce_tabs">
+								<div class="card col-md-4 agile_ecommerce_tab_left">
+									<img src="static/images/Necklace1/4.png" alt=" " class="card-img-top" />
+									
+								<h5>Silver Necklace</h5>
+								<div class="simpleCart_shelfItem">
+									<p><span>Rs.800</span> <i class="item_price">Rs.700</i></p>
+									<p><a class="item_add" style="color: #fff;" type=button onclick="addToCart('static/images/Necklace1/4.png', 700, 'Silver Necklace')">Add to cart</a></p>
+									    
+									<p><a class="item_add" href="{{ url_for('tryon',method='POST',
+									file_path='static,images,Necklace1,4.png') }}">Try it Now!</a></p>
+								</div>
+							</div>
+							
+							<div class="card col-md-4 agile_ecommerce_tab_left">
+								
+									<img src="static/images/Necklace1/5.png" alt=" " class="card-img-top" />
+									
+								<h5>Thread necklace</h5>
+								<div class="simpleCart_shelfItem">
+									<p><span>Rs.920</span> <i class="item_price">Rs.800</i></p>
+									<p><a class="item_add" style="color: #fff;" type=button onclick="addToCart('static/images/Necklace1/5.png', 800, 'Thread Necklace')">Add to cart</a></p>
+									    
+									<p><a class="item_add" href="{{ url_for('tryon',method='POST',
+									file_path='static,images,Necklace1,5.png') }}">Try it Now!</a></p>
+								</div>
+							</div>
+							</div>
+						</div>
+						
+						<!-- Earrings -->
+						<div role="tabpanel" class="tab-pane fade" id="skirts" aria-labelledby="skirts-tab">
+							<div class="card-group agile_ecommerce_tabs">
+								<div class="card col-md-4 agile_ecommerce_tab_left">
+										<img src="static/images/Earrings2/1.png" alt=" " class="card-img-top" />
+										
+									<h5>Studs</h5>
+									<div class="simpleCart_shelfItem">
+										<p><span>Rs.320</span> <i class="item_price">Rs.200</i></p>
+										<p><a class="item_add" style="color: #fff;" type=button onclick="addToCart('static/images/Earrings2/1.png', 200, 'Studs')">Add to cart</a></p>
+									    <p><a class="item_add" href="{{ url_for('tryon',method='POST',
+                                        file_path='static,images,Earrings2,1.png') }}">Try it Now!</a></p>
+									</div>
+								</div>
+								
+								<div class="card col-md-4 agile_ecommerce_tab_left">
+										<img src="static/images/Earrings2/2.png" alt=" " class="card-img-top" />
+									<h5>Goldwork earrings</h5>
+									<div class="simpleCart_shelfItem">
+										
+										<p><span>Rs.220</span> <i class="item_price">Rs.200</i></p>
+										<p><a class="item_add" style="color: #fff;" type=button onclick="addToCart('static/images/Earrings2/2.png', 200, 'Goldwork Earrings')">Add to cart</a></p>
+									    
+									    <p><a class="item_add" href="{{ url_for('tryon',method='POST',
+                                        file_path='static,images,Earrings2,2.png') }}">Try it Now!</a></p>
+									</div>
+								</div>
+								
+								<div class="card col-md-4 agile_ecommerce_tab_left">
+									<div class="hs-wrapper">
+										<img src="static/images/Earrings2/3.png" alt=" " class="card-img-top" />
+										<div class="w3_hs_bottom">
+											<ul>
+												<li>
+													<a href="#" data-toggle="modal" data-target="#<!--myModal6-->"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<h5>Goldwork earrings</h5>
+									<div class="simpleCart_shelfItem">
+										
+										<p><span>Rs.620</span> <i class="item_price">Rs.500</i></p>
+										<p><a class="item_add" style="color: #fff;" type=button onclick="addToCart('static/images/Earrings2/3.png', 500, 'Goldwork Earrings')">Add to cart</a></p>
+									    <p><a class="item_add" href="{{ url_for('tryon',method='POST',
+                                        file_path='static,images,Earrings2,3.png') }}">Try it Now!</a></p>
+									</div>
+								</div>
+
+								<div class="clearfix"> </div>
+							</div>
+							<div class="card-group agile_ecommerce_tabs">
+								<div class="card col-md-4 agile_ecommerce_tab_left">
+									<div class="hs-wrapper">
+										<img src="static/images/Earrings2/4.png" alt=" " class="card-img-top" />
+										<div class="w3_hs_bottom">
+											<ul>
+												<li>
+													<a href="#" data-toggle="modal" data-target="#<!--myModal6-->"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<h5>Goldwork earrings</h5>
+									<div class="simpleCart_shelfItem">
+										
+										<p><span>Rs.720</span> <i class="item_price">Rs.600</i></p>
+										<p><a class="item_add" style="color: #fff;" type=button onclick="addToCart('static/images/Earrings2/4.png', 600, 'Goldwork Earrings')">Add to cart</a></p>
+									    <p><a class="item_add" href="{{ url_for('tryon',method='POST',
+                                        file_path='static,images,Earrings2,4.png') }}">Try it Now!</a></p>
+									</div>
+								</div>
+
+								<div class="card col-md-4 agile_ecommerce_tab_left">
+									<div class="hs-wrapper">
+										<img src="static/images/Earrings2/5.png" alt=" " class="card-img-top" />
+										<div class="w3_hs_bottom">
+											<ul>
+												<li>
+													<a href="#" data-toggle="modal" data-target="#<!--myModal6-->"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<h5>Goldwork earrings</h5>
+									<div class="simpleCart_shelfItem">
+										<p><span>Rs.1200</span> <i class="item_price">Rs.1000</i></p>
+										<p><a class="item_add" style="color: #fff;" type=button onclick="addToCart('static/images/Earrings2/5.png', 1000, 'Goldwork Earrings')">Add to cart</a></p>
+									    <p><a class="item_add" href="{{ url_for('tryon',method='POST',
+                                        file_path='static,images,Earrings2,5.png') }}">Try it Now!</a></p>
+									</div>
+								</div>
+
+								<div class="card col-md-4 agile_ecommerce_tab_left">
+									<div class="hs-wrapper">
+										<img src="static/images/Earrings2/6.png" alt=" " class="card-img-top" />
+										<div class="w3_hs_bottom">
+											<ul>
+												<li>
+													<a href="#" data-toggle="modal" data-target="#<!--myModal6-->"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<h5>Hangings</h5>
+									<div class="simpleCart_shelfItem">
+										
+										<p><span>Rs.320</span> <i class="item_price">Rs.200</i></p>
+										<p><a class="item_add" style="color: #fff;" type=button onclick="addToCart('static/images/Earrings2/6.png', 200, 'Hangings')">Add to cart</a></p>
+									    
+									    <p><a class="item_add" href="{{ url_for('tryon',method='POST',
+                                        file_path='static,images,Earrings2,6.png') }}">Try it Now!</a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Frocks-->
+						<div role="tabpanel" class="tab-pane fade" id="dresses" aria-labelledby="dresses-tab">
+							<div class="card-group agile_ecommerce_tabs">
+								<div class="card col-md-4 agile_ecommerce_tab_left">
+										<img src="static/images/Frocks5/1.png" alt=" " class="card-img-top" />
+										
+									<h5>Frock-1</h5>
+									<div class="simpleCart_shelfItem">
+										
+										<p><span>Rs.320</span> <i class="item_price">Rs.200</i></p>
+										<p><a class="item_add" style="color: #fff;" type=button onclick="addToCart('static/images/Frocks5/1.png', 200, 'Frock-1')">Add to cart</a></p>
+									    
+									    <p><a class="item_add" href="{{ url_for('tryon',method='POST',
+                                        file_path='static,images,Frocks5,1.png') }}">Try it Now!</a></p>
+									</div>
+								</div>
+								
+								<div class="card col-md-4 agile_ecommerce_tab_left">
+										<img src="static/images/Frocks5/2.png" alt=" " class="card-img-top" />
+									<h5>Frock-2</h5>
+									<div class="simpleCart_shelfItem">
+										
+										<p><span>Rs.420</span> <i class="item_price">Rs.300</i></p>
+										<p><a class="item_add" style="color: #fff;" type=button onclick="addToCart('static/images/Frocks5/2.png', 300, 'Frock-2')">Add to cart</a></p>
+									    
+									    <p><a class="item_add" href="{{ url_for('tryon',method='POST',
+                                        file_path='static,images,Frocks5,2.png') }}">Try it Now!</a></p>
+									</div>
+								</div>
+								
+								<div class="card col-md-4 agile_ecommerce_tab_left">
+									<div class="hs-wrapper">
+										<img src="static/images/Frocks5/3.png" alt=" " class="card-img-top" />
+										<div class="w3_hs_bottom">
+											<ul>
+												<li>
+													<a href="#" data-toggle="modal" data-target="#<!--myModal6-->"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<h5>Frock-3</h5>
+									<div class="simpleCart_shelfItem">
+										<p><span>Rs.520</span> <i class="item_price">Rs.500</i></p>
+										<p><a class="item_add" style="color: #fff;" type=button onclick="addToCart('static/images/Frocks5/3.png', 500, 'Frock-3')">Add to cart</a></p>
+									    
+									    <p><a class="item_add" href="{{ url_for('tryon',method='POST',
+                                        file_path='static,images,Frocks5,3.png') }}">Try it Now!</a></p>
+									</div>
+								</div>
+
+								<div class="clearfix"> </div>
+							</div>
+							<div class="card-group agile_ecommerce_tabs">
+								<div class="card col-md-4 agile_ecommerce_tab_left">
+									<div class="hs-wrapper">
+										<img src="static/images/Frocks5/4.png" alt=" " class="card-img-top" />
+										<div class="w3_hs_bottom">
+											<ul>
+												<li>
+													<a href="#" data-toggle="modal" data-target="#<!--myModal6-->"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<h5>Frock-4</h5>
+									<div class="simpleCart_shelfItem">
+										
+										<p><span>Rs.420</span> <i class="item_price">Rs.300</i></p>
+										<p><a class="item_add" style="color: #fff;" type=button onclick="addToCart('static/images/Frocks5/4.png', 300, 'Frock-4')">Add to cart</a></p>
+									    
+									    <p><a class="item_add" href="{{ url_for('tryon',method='POST',
+                                        file_path='static,images,Frocks5,4.png') }}">Try it Now!</a></p>
+									</div>
+								</div>
+
+								<div class="card col-md-4 agile_ecommerce_tab_left">
+									<div class="hs-wrapper">
+										<img src="static/images/Frocks5/5.png" alt=" " class="card-img-top" />
+										<div class="w3_hs_bottom">
+											<ul>
+												<li>
+													<a href="#" data-toggle="modal" data-target="#<!--myModal6-->"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<h5>FRock-5</h5>
+									<div class="simpleCart_shelfItem">
+										<p><span>Rs.820</span> <i class="item_price">Rs.700</i></p>
+										<p><a class="item_add" style="color: #fff;" type=button onclick="addToCart('static/images/Frocks5/5.png', 700, 'Frock-5')">Add to cart</a></p>
+									    
+									    <p><a class="item_add" href="{{ url_for('tryon',method='POST',
+                                        file_path='static,images,Frocks5,5.png') }}">Try it Now!</a></p>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+						<!-- Tops -->
+						<div role="tabpanel" class="tab-pane fade" id="sandals" aria-labelledby="sandals-tab">
+							<div class="card-group agile_ecommerce_tabs">
+								<div class="card col-md-4 agile_ecommerce_tab_left">
+										<img src="static/images/Tops4/3.png" alt=" " class="card-img-top" />
+										
+									<h5>Top-1</h5>
+									<div class="simpleCart_shelfItem">
+										
+										<p><span>Rs.420</span> <i class="item_price">Rs.300</i></p>
+										<p><a class="item_add" style="color: #fff;" type=button onclick="addToCart('static/images/Tops4/3.png', 300, 'Top-1')">Add to cart</a></p>
+									    
+									    <p><a class="item_add" href="{{ url_for('tryon',method='POST',
+                                        file_path='static,images,Tops4,3.png') }}">Try it Now!</a></p>
+									</div>
+								</div>
+								
+								<div class="card col-md-4 agile_ecommerce_tab_left">
+										<img src="static/images/Tops4/5.png" alt=" " class="card-img-top" />
+									<h5>Top-2</h5>
+									<div class="simpleCart_shelfItem">
+										<p><span>Rs.620</span> <i class="item_price">Rs.560</i></p>
+										<p><a class="item_add" style="color: #fff;" type=button onclick="addToCart('static/images/Tops/5.png', 560, 'Top-2')">Add to cart</a></p>
+									    
+									    <p><a class="item_add" href="{{ url_for('tryon',method='POST',
+                                        file_path='static,images,Tops4,5.png') }}">Try it Now!</a></p>
+									</div>
+								</div>
+								
+								<div class="card col-md-4 agile_ecommerce_tab_left">
+									<div class="hs-wrapper">
+										<img src="static/images/Tops4/6.png" alt=" " class="card-img-top" />
+										<div class="w3_hs_bottom">
+											<ul>
+												<li>
+													<a href="#" data-toggle="modal" data-target="#<!--myModal6-->"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<h5>Top-3</h5>
+									<div class="simpleCart_shelfItem">
+										
+										<p><span>Rs.900</span> <i class="item_price">Rs.450</i></p>
+										<p><a class="item_add" style="color: #fff;" type=button onclick="addToCart('static/images/Tops4/6.png', 450, 'Top-3')">Add to cart</a></p>
+									    
+									    <p><a class="item_add" href="{{ url_for('tryon',method='POST',
+                                        file_path='static,images,Tops4,6.png') }}">Try it Now!</a></p>
+									</div>
+								</div>
+
+								<div class="clearfix"> </div>
+							</div>
+							<div class="card-group agile_ecommerce_tabs">
+								<div class="card col-md-4 agile_ecommerce_tab_left">
+									<div class="hs-wrapper">
+										<img src="static/images/Tops4/7.png" alt=" " class="card-img-top" />
+										<div class="w3_hs_bottom">
+											<ul>
+												<li>
+													<a href="#" data-toggle="modal" data-target="#<!--myModal6-->"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<h5>Top-4</h5>
+									<div class="simpleCart_shelfItem">
+										
+										<p><span>Rs.920</span> <i class="item_price">Rs.900</i></p>
+										<p><a class="item_add" style="color: #fff;" type=button onclick="addToCart('static/images/Tops4/7.png', 900, 'Top-4')">Add to cart</a></p>
+									    
+									    <p><a class="item_add" href="{{ url_for('tryon',method='POST',
+                                        file_path='static,images,Tops4,7.png') }}">Try it Now!</a></p>
+									</div>
+								</div>
+
+								<div class="card col-md-4 agile_ecommerce_tab_left">
+									<div class="hs-wrapper">
+										<img src="static/images/Tops4/13.png" alt=" " class="card-img-top" />
+										<div class="w3_hs_bottom">
+											<ul>
+												<li>
+													<a href="#" data-toggle="modal" data-target="#<!--myModal6-->"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<h5>Top-5</h5>
+									<div class="simpleCart_shelfItem">
+										
+										<p><span>Rs.420</span> <i class="item_price">Rs.300</i></p>
+										<p><a class="item_add" style="color: #fff;" type=button onclick="addToCart('static/images/Tops/13.png', 300, 'Top-5')">Add to cart</a></p>
+									    
+									    <p><a class="item_add" href="{{ url_for('tryon',method='POST',
+                                        file_path='static,images,Tops4,13.png') }}">Try it Now!</a></p>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+					<!--modal-video-->
+					
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+<!-- //banner-bottom -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+	<script type="text/javascript">
+
+		var CART = [];
+		var count = 0;
+		
+		function addToCart(product_img, cost, product_name) {
+			CART.push(product_img);
+			CART.push(cost.toString());
+			CART.push(product_name);
+			
+			count++;
+			console.log(CART)
+			
+			var button = document.getElementById("simpleCart_quantity");
+			button.innerHTML = count + " Items";
+			console.log(count);
+			
+			alert("Added Product To Cart")
+		}
+		
+		function checkOut(){
+			alert("IN CheckOUT");
+			localStorage.setItem('cart', CART);
+		}
+	</script>
+	
+</body>
+</html>
